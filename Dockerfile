@@ -21,4 +21,11 @@ RUN apk add --no-cache \
 
 ADD bashrc '/root/.bashrc'
 
+# install networking utils
+RUN apk add --no-cache \
+            curl \
+            curl-doc \
+            jq \
+            jq-doc
+
 CMD ["bash"]
