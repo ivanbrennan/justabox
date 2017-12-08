@@ -28,4 +28,9 @@ RUN apk add --no-cache \
             jq \
             jq-doc
 
+# install GNU grep
+RUN apk add --no-cache \
+            grep \
+            grep-doc
+
 CMD ["bash"]
