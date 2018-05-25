@@ -28,9 +28,11 @@ RUN apk add --no-cache \
             jq \
             jq-doc
 
-# install GNU grep
+# install GNU grep & coreutils
 RUN apk add --no-cache \
             grep \
-            grep-doc
+            grep-doc \
+            coreutils \
+            coreutils-doc
 
 CMD ["bash"]
