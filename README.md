@@ -4,6 +4,8 @@
 
 ``ivanbrennan/justnix``: Linux with the Nix package manager and a basic toolchain
 
+``ivanbrennan/nixdev``: justnix plus development tools (ag, vim plugins, etc.)
+
 ## scripts
 
 ```sh
