@@ -11,15 +11,11 @@ RUN apk add --no-cache \
         less \
         less-doc
 
-ENV PAGER=less
-
 # install bash
 RUN apk add --no-cache \
         bash \
         bash-doc \
         bash-completion
-
-ADD bashrc '/root/.bashrc'
 
 # install networking utils
 RUN apk add --no-cache \
@@ -34,5 +30,12 @@ RUN apk add --no-cache \
             grep-doc \
             coreutils \
             coreutils-doc
+
+COPY bashrc /root/.bashrc
+
+ENV PAGER=less \
+    DOTFILES_REV=b909731990626fe64b438c567677c5fd9d03f166
+
+RUN curl https://raw.githubusercontent.com/ivanbrennan/dotfiles/${DOTFILES_REV}/shell/inputrc -o /root/.inputrc
 
 CMD ["bash"]
