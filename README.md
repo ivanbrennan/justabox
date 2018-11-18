@@ -2,6 +2,8 @@
 
 ``ivanbrennan/justalpine``: Alpine Linux with Bash and a basic toolchain (curl, jq, etc.)
 
+``ivanbrennan/justnix``: Linux with the Nix package manager and a basic toolchain
+
 ## scripts
 
 ```sh
