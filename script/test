@@ -1,0 +1,17 @@
+#! /bin/sh
+
+set -eu
+
+main() {
+    image=testbox
+    context="$1"
+
+    docker image rm "$image" 2>/dev/null || true
+
+    docker build --tag "$image" "$context" &&
+        docker run --rm --interactive --tty "$image"
+}
+
+dir=$(dirname "$0")
+. "$dir/common"
+run_main_with_args "$@"

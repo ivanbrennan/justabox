@@ -1,0 +1,15 @@
+#! /bin/sh
+
+set -eu
+
+main() {
+    context="$1"
+    image=ivanbrennan/$(basename "$(realpath "$context")")
+    version=$(cat "$context/VERSION")
+
+    docker image rm "$image:$version" "$image:latest" 2>/dev/null || true
+}
+
+dir=$(dirname "$0")
+. "$dir/common"
+run_main_with_args "$@"

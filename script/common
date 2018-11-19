@@ -1,0 +1,18 @@
+#! /bin/sh
+
+usage() {
+    cat <<EOF
+Usage: $0 CONTEXT
+e.g.
+   $0 justalpine
+EOF
+}
+
+run_main_with_args() {
+    if [ $# -eq 1 ] && [ -d "$1" ]
+    then
+        main "$@"
+    else
+        usage && exit 1
+    fi
+}

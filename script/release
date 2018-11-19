@@ -1,0 +1,11 @@
+#! /bin/sh
+
+set -eu
+
+main() {
+    "$dir/build" "$@" && "$dir/push" "$@"
+}
+
+dir=$(dirname "$0")
+. "$dir/common"
+run_main_with_args "$@"
