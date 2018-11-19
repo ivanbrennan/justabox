@@ -6,7 +6,7 @@
 
 ``ivanbrennan/nixdev``: justnix plus development tools (ag, vim plugins, etc.)
 
-``ivanbrennan/nixcabal``: nixdev plus cabal tools (cabal-install, cabal2nix, etc.)
+``ivanbrennan/nixcabal``: nixdev plus cabal tools (cabal2nix, etc.)
 
 ## scripts
 
