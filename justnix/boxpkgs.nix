@@ -6,11 +6,23 @@ let
     paths = [
       bash-completion
       binutils
+      diffutils
+      file
+      htop
       less
+      lsof
       man
       manpages
       nix-bash-completions
       nix-prefetch-git
+      psmisc
+      socat
+      tcpdump
+      tree
+      unzip
+      wget
+      xsel
+      zip
     ];
   };
 
