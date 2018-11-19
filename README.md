@@ -8,6 +8,12 @@
 
 ``ivanbrennan/nixcabal``: nixdev plus cabal tools (cabal-install, cabal2nix, etc.)
 
+## example
+
+```sh
+docker run --rm -it ivanbrennan/nixdev
+```
+
 ## scripts
 
 ```sh
