@@ -17,19 +17,19 @@ RUN apk add --no-cache \
         bash-completion \
         bash-doc
 
-# install networking utils
-RUN apk add --no-cache \
-            curl \
-            curl-doc \
-            jq \
-            jq-doc
-
 # install GNU grep & coreutils
 RUN apk add --no-cache \
             coreutils \
             coreutils-doc \
             grep \
             grep-doc
+
+# install networking utils
+RUN apk add --no-cache \
+            curl \
+            curl-doc \
+            jq \
+            jq-doc
 
 COPY bashrc /root/.bashrc
 
