@@ -32,6 +32,7 @@ RUN apk add --no-cache \
             psmisc-doc \
             socat \
             socat-doc \
+            tar-doc \
             tcpdump \
             tcpdump-doc \
             tree \
