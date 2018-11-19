@@ -17,19 +17,34 @@ RUN apk add --no-cache \
         bash-completion \
         bash-doc
 
-# install GNU grep & coreutils
+# install file utils & GNU grep
 RUN apk add --no-cache \
             coreutils \
             coreutils-doc \
+            file \
+            file-doc \
             grep \
-            grep-doc
+            grep-doc \
+            htop \
+            htop-doc \
+            lsof-doc \
+            psmisc \
+            psmisc-doc \
+            socat \
+            socat-doc \
+            tcpdump \
+            tcpdump-doc \
+            tree \
+            tree-doc \
+            zip
 
 # install networking utils
 RUN apk add --no-cache \
             curl \
             curl-doc \
             jq \
-            jq-doc
+            jq-doc \
+            wget-doc
 
 COPY bashrc /root/.bashrc
 
