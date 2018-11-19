@@ -5,6 +5,7 @@ let
     name = "boxtools";
     paths = [
       bash-completion
+      binutils
       less
       man
       manpages
@@ -17,6 +18,7 @@ let
     name = "manpages-hack";
     paths = [
       bashInteractive.man
+      binutils.man
       curl.man
       jq.man
     ];
@@ -26,4 +28,5 @@ let
 in buildEnv {
     name = "boxpkgs";
     paths = [ boxtools boxdocs ];
+    meta.priority = 10;
 }
