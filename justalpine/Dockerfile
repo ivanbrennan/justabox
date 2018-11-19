@@ -5,17 +5,17 @@ RUN apk update
 
 # install core man-pages
 RUN apk add --no-cache \
+        less \
+        less-doc \
         man \
         man-pages \
-        mdocml-apropos \
-        less \
-        less-doc
+        mdocml-apropos
 
 # install bash
 RUN apk add --no-cache \
         bash \
-        bash-doc \
-        bash-completion
+        bash-completion \
+        bash-doc
 
 # install networking utils
 RUN apk add --no-cache \
@@ -26,10 +26,10 @@ RUN apk add --no-cache \
 
 # install GNU grep & coreutils
 RUN apk add --no-cache \
-            grep \
-            grep-doc \
             coreutils \
-            coreutils-doc
+            coreutils-doc \
+            grep \
+            grep-doc
 
 COPY bashrc /root/.bashrc
 
