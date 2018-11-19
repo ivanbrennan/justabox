@@ -6,6 +6,7 @@ let
     paths = [
       ag
       fzf
+      shellcheck
     ];
   };
 
